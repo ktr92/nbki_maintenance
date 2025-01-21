@@ -92,6 +92,15 @@ body {
   color: #7b7794;
 }
 .maintenance__rightcontent {
+  min-width: 450px;
+  position: relative;
+}
+.maintenance__rightcontent  img {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  top: 0;
+  max-width: unset;
 }
 .maintenance__image {
   margin-top: -32px;
@@ -120,13 +129,20 @@ body {
   text-align: center;
   color: #fff;
 }
-img {
-  max-width: 100%;
+.maintenance__leftcontent {
+  position: relative;
+  z-index: 1;
 }
 .maintenance__infoicon {
   min-width: 27px;
 }
 @media (max-width: 1023px) {
+  img {
+    max-width: 100%;
+  }
+  .maintenance__rightcontent {
+    display: none;
+  }
   .maintenance {
     display: block;
   }
